@@ -1,0 +1,21 @@
+.users-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-block{
+    width: 48%;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 2px;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.post-card{
+    width: 18%;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 2px;
+}
