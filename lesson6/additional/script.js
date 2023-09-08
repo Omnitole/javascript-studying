@@ -216,6 +216,7 @@ console.log(booksArray.filter(value => value.genre.length === biggestAmountOfGen
 let longestName = booksArray.sort((a, b) => b.name.length - a.name.length)[0].name.length
 console.log(booksArray.filter(value => value.name.length === longestName));
 
+
 // - знайти книжку/ки які писали 2 автори
 console.log(booksArray.filter(value => value.authors.length === 2));
 
