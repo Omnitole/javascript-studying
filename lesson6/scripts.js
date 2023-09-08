@@ -411,4 +411,4 @@ console.log(booksArray.filter(value => value.authors.length === 2));
 console.log(booksArray.filter(value => value.authors.length === 1));
 
 // - вісортувати книжки по кількості сторінок по зростанню
-console.log(booksArray.sort((a,b)=> a.size - b.size))
+console.log(booksArray.sort((a,b)=> a.size - b.size)) df
