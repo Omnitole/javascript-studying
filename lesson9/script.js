@@ -220,11 +220,11 @@ for (const item of coursesArray) {
     document.body.appendChild(wrap)
 }
 
-//
-// let arrayOfMusic = []
-// for (const song of document.querySelectorAll(`.item-grid__item`)) {
-//     arrayOfMusic.push({title:song.querySelector(".item-grid-card__title").textContent,
-//         author:song.querySelector(".item-grid-music-preview__author").textContent,
-//         mp3:song.querySelector(".item-grid-card--show-meta").children[0].getAttribute("data-audio-player-preview-url-value")})
-// }
-// console.log(arrayOfMusic);
+
+let arrayOfMusic = []
+for (const song of document.querySelectorAll(`.item-grid__item`)) {
+    arrayOfMusic.push({title:song.querySelector(".item-grid-card__title").innerText,
+        author:song.querySelector(".item-grid-music-preview__author").innerText.slice(3),
+        mp3:song.querySelector(".item-grid-card--show-meta").children[0].getAttribute("data-audio-player-preview-url-value")})
+}
+console.log(arrayOfMusic);
