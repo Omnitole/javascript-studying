@@ -219,3 +219,12 @@ for (const item of coursesArray) {
     wrap.append(header,monthsAndHoursBlock,modules);
     document.body.appendChild(wrap)
 }
+
+//
+// let arrayOfMusic = []
+// for (const song of document.querySelectorAll(`.item-grid__item`)) {
+//     arrayOfMusic.push({title:song.querySelector(".item-grid-card__title").textContent,
+//         author:song.querySelector(".item-grid-music-preview__author").textContent,
+//         mp3:song.querySelector(".item-grid-card--show-meta").children[0].getAttribute("data-audio-player-preview-url-value")})
+// }
+// console.log(arrayOfMusic);
