@@ -139,11 +139,41 @@ f3.onsubmit = function (e) {
     }
 }
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
-let arrayOfImages = ["Auto.png"]
-let img = document.createElement('img')
-img.src = arrayOfImages[0];
-document.body.appendChild(img)
-
-
+let arrayOfImages = ["Auto.png","Bus.jpg","Girl.jpg","Mozilla.jpg","Pizza.jpg","Anime.jpg","Pancakes.jpg","Potatoes.jpg","Rick.jpg","Soldier.jpg"]
+let number = JSON.parse(localStorage.getItem('number')) || 0;
+let wrap = document.createElement('div');
+wrap.style.display = "flex"
+let leftArrowBlock = document.createElement('div');
+let leftArrow = document.createElement('img');
+leftArrow.src = 'left.jpg';
+leftArrowBlock.onclick = function () {
+    let newNumber = +number-3
+    if (newNumber <0){
+        newNumber = 0
+    }
+    localStorage.setItem('number',JSON.stringify(newNumber))
+    location.reload()
+}
+leftArrowBlock.appendChild(leftArrow);
+let rightArrowBlock = document.createElement('div');
+let rightArrow = document.createElement('img');
+rightArrow.src = 'right.jpg';
+rightArrowBlock.onclick = function () {
+    let newNumber = +number+3
+    if(newNumber > 8){
+        newNumber = 7;
+    }
+    localStorage.setItem('number',JSON.stringify(newNumber))
+    location.reload()
+}
+rightArrowBlock.appendChild(rightArrow);
+let karusel = document.createElement('div');
+for (let i = number; i <= number+2; i++) {
+    let image = document.createElement('img');
+    image.src = arrayOfImages[i];
+    karusel.appendChild(image)
+}
+wrap.append(leftArrowBlock,karusel,rightArrowBlock)
+document.body.appendChild(wrap);
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
