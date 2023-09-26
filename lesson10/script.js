@@ -4,11 +4,16 @@
 let f1 = document.forms.f1;
 f1.onsubmit = function (e) {
     e.preventDefault()
-    let div = document.createElement('div');
-    div.style.border = "2px solid black";
-    div.style.padding = "5px";
-    div.innerText = f1.name.value + ' ' + f1.surname.value + ` ` + f1.age.value + ' years old';
-    document.body.appendChild(div)
+    if(f1.name.value && f1.age.value && f1.surname.value){
+        let div = document.createElement('div');
+        div.style.border = "2px solid black";
+        div.style.padding = "5px";
+        div.innerText = f1.name.value + ' ' + f1.surname.value + ` ` + f1.age.value + ' years old';
+        document.body.appendChild(div)
+        f1.name.value = '';
+        f1.age.value = '';
+        f1.surname.value = ''
+    }
 }
 // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 let div = document.getElementsByClassName('target')[0];
