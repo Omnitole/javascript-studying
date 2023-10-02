@@ -1,0 +1,19 @@
+.user {
+    border: 2px solid black;
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+}
